@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(0, 0, 109);
+    text-align: center;
+
+}
+
+body{
+    
+    padding: 2% 5%;
+    background-image: url(gradiente-bg.png);
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    background-size: 100%;
+    opacity: 0.9;
+}
+.minha-classe{
+    color: blue;
+}
+
+#article1{
+    border: 1px solid rgb(15, 15, 61);
+    margin: 2% 0%;
+    padding: 2%;
+}
+#article2{
+    border-width: 1px;
+    border-style: solid;
+    border-color: blue;
+    margin: 10pt 0pt;
+    padding: 2vw; 
+}
+
+#article3{
+    border-width: 2px;
+    border-style: ridge;
+    border-color: blue;
+    margin: 10pt 0pt;
+    padding: 2vw
+}
+
+#article4{
+    border: 2vw solid red;
+    margin: 10pt 0pt;
+    padding: 2vw
+}
+#article5{
+    border-width: 2px;
+    border-style: ridge;
+    border-color: blue;
+    margin: 10pt 0pt;
+    padding: 2vw
+}
+
+article h1{
+    font-size: 30px; 
+}
+
+section{
+    padding: 2% 0%;
+}
+
+.div_pai{
+    background-color: rgb(215, 249, 255);
+    margin: auto;
+    padding: 2%;
+}
+
+h1{
+    color: brown;
+    align-content: center;
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+}
+
+.nav_sup{
+    background-color: brown;
+    overflow: hidden;
+}
+
+.nav_sup ul{
+    list-style-type: none;
+    text-align: center;
+}
+.nav_sup ul li{
+    width: 29.3333333%;
+    margin: auto;
+    float: left;
+    padding: 2%;
+}
+.nav_sup ul li a{
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+#boneco{
+    width: 300px;
+    height: 300px;
+    border: solid black;
+}

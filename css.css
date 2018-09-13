@@ -1,0 +1,62 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.capa{
+    padding: 0 0 2% 0;
+}
+
+.div_pai{
+    overflow: hidden;
+    margin: auto;
+}
+
+
+.div_ativ{
+    padding: 1% 2%;
+    width: 29.33333333%;
+    background-color: rgb(180, 100, 255);
+    display: block;
+    float: left;
+    margin: auto;
+}
+
+.capa_ativ{
+    width: 100%;
+    margin: auto;
+}
+
+.div_ativ img:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+body{
+    background-image: url(bg.jpg);
+    background-repeat: repeat-y;
+    background-size: 100%;
+    padding: 0 10%;
+    background-attachment: fixed;
+    opacity: 0.9;
+}
+
+.div_pai li{
+    text-decoration: none;
+    list-style-type: none;
+    margin: auto;
+}
+
+h1{
+    font-size: 18px;
+}
+
+h2{
+    color: black;
+    font-size: 16px;
+    text-align: center;
+    padding: 3% 0 3% 0;
+}

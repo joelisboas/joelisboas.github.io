@@ -3,19 +3,160 @@
     margin: 0;
 }
 
-.nav_sup{
-    background-color: green;
+
+
+/* .conteudo{
+    color: rgb(92, 92, 92);
+    width: 600px;
     overflow: hidden;
+    position: relative;
+    left: 50px;
+    top: 35px;
+    padding: 0% 0%;
+    text-align: center;
+}
+
+.conteudo h1{
+    font-size: 80px;
+    font-weight: 400;
+    font-family: "Segoe UI",Arial,sans-serif;
+}
+
+.conteudo p{
+    margin: 2% 2% 4%;
+    font-size: 24px;
+    font-family: Verdana,sans-serif;
+}
+
+.conteudo_botao, .conteudo_botao ul{
+    margin: auto;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: Verdana,sans-serif;
+}
+
+.conteudo_botao ul li{
+    background-color: rgb(92, 92, 92);
+    padding: 2%;
+    width: 150px;
+    margin: 2%;
+    float: left;
+}
+
+.conteudo_botao ul li a{
+    padding: 2%;
+    color: white; 
+} */
+
+.dropdown_menu{
+    padding: 8%;
+    background-color: rgb(240, 240, 240);
+    width: 183px;
+    height: 300px;
+    margin: auto;
+    text-align: left;
+    font-family:"Segoe UI",Arial,sans-serif;
+}
+
+.dropdown_menu p{
+    padding: 3px;
+    font-weight: bold;
+}
+
+.dropdown_menu li {
+    padding: 3px;
+}
+
+.dropdown{
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown_botao{
+    color: white;
+    width: 180px;
+    padding: 16px;
+    letter-spacing: 4px; 
+    font-size: 20px;
+    font-family: "Segoe UI",Arial,sans-serif;
+    text-align: center;
+}
+
+.dropdown_conteudo{
+    position: absolute;   
+    display: none;
+    box-shadow: 2% 2% 50% rgba(0,0,0, 0.8);
+}
+
+.dropdown:hover .dropdown_conteudo{
+    display: block;
+}
+
+.dropdown:hover .dropdown_botao{
+    background-color: white;
+    color: black;
+}
+
+.dropdown_menu li:hover{
+    background-color: rgb(196, 196, 196);
+}
+
+.nav_lateral li{
+    list-style-type: none;
+}
+
+.nav_lateral a{
+    text-decoration: none;
+    color: black;
+    padding: 2%;
+}
+
+.nav_lateral{
+    float: left;
+    width: 200px;
+    font-family:"Segoe UI",Arial,sans-serif;
+    box-shadow: 2px 0px 2px rgba(0,0,0, 0.1)
+}
+
+.nav_lateral li{
+    padding: 1% 6%;
+}
+
+.nav_lateral p{
+    font-size: 20px;
+    padding: 4% 6% 8%;
+    font-weight: bold;
+}
+
+.nav_lateral li:hover{
+    background-color: rgb(196, 196, 196);
+}
+
+.header{
+    padding: 20px 13px 2px;
+}
+
+.headerp{
+    font-family: "Segoe UI",Arial,sans-serif;
+    float: right;
+    position: relative;
+    top: 15px;
+    letter-spacing: 4px;
+}
+
+.nav_sup{
+    background-color: #4CAF50;
+    overflow: hidden;
+    box-shadow: 0px 4px 7px rgba(0,0,0, 0.1)
 }
 
 .nav_sup ul{
     list-style-type: none;
 }
+
 .nav_sup ul li a{
-    color: white;
+    color: black;
     text-decoration: none;
-    display: block;
-    padding: 5%;
 }
 
 .lista_left{

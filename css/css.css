@@ -7,19 +7,29 @@
     padding: 0 0 2% 0;
 }
 
-.div_pai{
-    overflow: hidden;
-    margin: auto;
+.div_galeria{
+    display: flex;
 }
-
 
 .div_ativ{
     padding: 1% 2%;
     width: 29.33333333%;
     background-color: rgb(180, 100, 255);
+    float: left;
+    margin: auto;
+}
+
+.div_trab{
+    padding: 1% 2%;
+    background-color: rgb(180, 100, 255);
     display: block;
     float: left;
     margin: auto;
+}
+
+.trabalho1{
+    display: block;
+    float: none;
 }
 
 .capa_ativ{
@@ -36,7 +46,7 @@
 }
 
 body{
-    background-image: url(background.jpg);
+    background-image: url(../img/background.jpg);
     background-repeat: repeat-y;
     background-size: 100%;
     padding: 0 10%;
@@ -44,10 +54,9 @@ body{
     opacity: 0.8;
 }
 
-.div_pai li{
+.div_galeria li{
     text-decoration: none;
     list-style-type: none;
-    margin: auto;
 }
 
 h1{

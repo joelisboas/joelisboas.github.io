@@ -73,6 +73,7 @@
 }
 
 .dropdown_botao{
+    cursor: pointer;
     color: white;
     width: 180px;
     padding: 16px;

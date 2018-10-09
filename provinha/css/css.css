@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: aquamarine;
+    opacity: 0.9;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav_sup{
+    background-color: rgb(216, 112, 190);
+    display: block;
+    box-sizing: border-box;
+}
+
+.nav_sup .lista_sup{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav_sup .lista_sup li{
+    list-style-type: none;
+    width: 180px;
+    height: 100%;
+}
+
+.lista_sup .botao{
+    text-align: center;
+    font-size: 20px;
+    height: 100%;
+    padding: 10px;
+}
+
+.mouse>li>a{
+    text-decoration: none;
+    color: black;
+    border-bottom: 4px solid rgb(105, 0, 79);
+    display: block;
+}
+
+.lista_sup .botao:hover{
+    color: white;
+    background-color: brown;
+}
+
+.dropdown{
+    position: absolute;
+    max-height: 0px;
+    background-color: brown;
+    overflow: hidden;
+    display: block;
+    transition: max-height 1s linear;
+}
+
+.mouse:hover .dropdown{
+    max-height: 500px;
+}
+
+.lista_dropdown{
+    overflow: hidden;
+    width: 180px;
+}
+
+.lista_dropdown li{
+    overflow: hidden;
+    padding: 15px 0;
+}
+
+.lista_dropdown li a{
+    text-decoration: none;
+    color: wheat;
+    padding: 20px;
+    width: 180px;
+}
+
+.lista_dropdown li:hover{
+    background-color: rgb(109, 34, 34);
+}
+
+.galeria{
+    display: flex;
+    height: 900px;
+}
+
+.galeria .galeria_esquerda{
+    overflow: hidden;
+    width: 50%;
+    height: 100%;
+    background-color: red;
+}
+
+.galeria .galeria_direita{
+    width: 50%;
+    height: 100%;
+    background-color: rgb(60, 0, 255);
+}
+
+.galeria .galeria_direita .galeria_direita_1{
+    background-color: black;
+    height: 50%;
+    
+}
+
+.galeria .galeria_direita .galeria_direita_2{
+    background-color: rgb(115, 255, 0);
+    height: 50%;
+    display: flex;
+}
+
+.img{
+    width: 100%;
+    height: 100%;
+}
+
+.galeria_esquerda .texto_html{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    width: 50%;
+    height: 10%;
+    position: absolute;
+    top: 90%;
+    color: rgb(255, 255, 0);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.imgcss{
+    transition: scale 200ms linear;
+}
+
+.galeria_direita_1 .img:hover{
+    transform: scale(1.1);
+}
+
+.galeria_direita .galeria_direita_2 .texto_web{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    height: 100%;
+    width: 100%;
+    color: rgb(0, 0, 0);
+    background-image: radial-gradient(rgb(129, 129, 129), white);
+}

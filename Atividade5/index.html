@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Atividade 5</title>
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="atividade5.css">
+</head>
+<body>
+    <nav class="nav">
+        <button class="sanduiche" href="#">&#9776;</button>
+        <header>AVARA KEDAVRA</header>
+    </nav>
+    <nav class="lateral">
+        <ul>
+            <li><a href="" target="_blank">Link</a></li>
+            <li><a href="" target="_blank">Link</a></li>
+            <li><a href="" target="_blank">Link</a></li>
+        </ul>
+    </nav>
+    <nav class="nav-acordeon">
+        <ul>
+            <li>
+            <div class="acordeon">
+                <div class="botao show">
+                    <p>BOTAO 1</p>
+                </div>
+                <div class="conteudo">
+                    <p>CONTEUDO CONTEUDO CONTEUDO CONTEUDO CONTEUDO
+                    </p>
+                </div>
+            </div>
+            <div class="acordeon">
+                <div class="botao">
+                    <p>BOTAO 2</p>
+                </div>
+                <div class="conteudo">
+                    <p>igo feio igo feio igo feio igo feio 
+                        igo feio igo feio igo feio igo feio
+                        igo feio igo feio igo feio igo feio
+                    </p>
+                </div>
+            </div>
+            <div class="acordeon">
+                <div class="botao">
+                    <p>BOTAO 3</p>
+                </div>
+                <div class="conteudo">
+                    <p>igo feio igo feio igo feio igo feio 
+                        igo feio igo feio igo feio igo feio
+                        igo feio igo feio igo feio igo feio 
+                    </p>
+                </div>
+            </div>
+            </li>
+        </ul>
+    </nav>
+    <script>
+
+        let clique = document.querySelector(".botao");
+        let meu_conteudo = document.querySelector(".conteudo");
+        meu_conteudo.style.height = "100px";
+
+        function max_h() {
+            meu_conteudo.classList.toggle("show");
+        }
+
+        clique.addEventListener("click", max_h);
+    
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    padding: 30px 15px 30px;
+    background-color: rgb(130, 186, 238);
+}
+
+header {
+    float: left;
+    font-family: louis george café, arial;
+    font-size: 15px;
+    letter-spacing: 3px;
+}
+
+.nav-acordeon {
+    position: relative;
+    float: left;
+}
+
+.botao {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    background-color: rgb(148, 255, 127);
+    padding: 2%;
+    width: 30vw;
+}
+
+.acordeon .conteudo {
+    position: relative;
+    overflow: hidden;
+    max-height: 0px;
+    transition: max-height 600ms;
+}
+
+.conteudo p{
+    position: absolute;
+}
+
+.lateral {
+    display: none;
+    background-color: rgb(98, 161, 161);
+    box-shadow: 5px 8px 15px #DCDCDC; 
+    font-family: "louis george café",Arial,sans-serif;
+}
+
+.sanduiche{
+    display: block;
+    width: 30px;
+    height: 30px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    margin-right: 10px;
+    float: left;
+}
+
+.nav-acordeon ul, .lateral ul {
+    list-style-type: none;
+}
+
+.lateral ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.lateral li {
+    padding: 2% 4% 10%;
+}
+
+.lateral ul li:hover {
+    background-color: rgb(169, 197, 193);
+    cursor: pointer;
+}
+
+@media screen and (min-width:480px) {
+    .lateral {
+        display: block;
+        float: left;
+        width: 25%;
+        height: 675px;
+    }
+
+    .sanduiche{
+        display: none;
+    }
+
+}

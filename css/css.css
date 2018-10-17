@@ -18,8 +18,8 @@ body{
 }
 
 .div_galeria{
-    display: flex;
     overflow: hidden;
+    display: flex;
 }
 
 .div_ativ a{

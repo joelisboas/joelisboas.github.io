@@ -4,72 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Atividade 5</title>
     <link rel="stylesheet" href="css/css.css">
-    <link rel="stylesheet" href="atividade5.css">
+    <title>Hogwarts</title>
 </head>
 <body>
-    <nav class="nav">
-        <button class="sanduiche" href="#">&#9776;</button>
-        <header>AVARA KEDAVRA</header>
-    </nav>
-    <nav class="lateral">
+
+    <nav class="nav_lateral">
         <ul>
-            <li><a href="" target="_blank">Link</a></li>
-            <li><a href="" target="_blank">Link</a></li>
-            <li><a href="" target="_blank">Link</a></li>
+            <li><a href="">GRIFINÓRIA</a></li>
+            <li><a href="">SONSERINA</a></li>
+            <li><a href="">CORVINAL</a></li>
+            <li><a href="">LUFA-LUFA</a></li>
         </ul>
     </nav>
-    <nav class="nav-acordeon">
-        <ul>
-            <li>
-            <div class="acordeon">
-                <div class="botao show">
-                    <p>BOTAO 1</p>
-                </div>
-                <div class="conteudo">
-                    <p>CONTEUDO CONTEUDO CONTEUDO CONTEUDO CONTEUDO
-                    </p>
-                </div>
-            </div>
-            <div class="acordeon">
-                <div class="botao">
-                    <p>BOTAO 2</p>
-                </div>
-                <div class="conteudo">
-                    <p>igo feio igo feio igo feio igo feio 
-                        igo feio igo feio igo feio igo feio
-                        igo feio igo feio igo feio igo feio
-                    </p>
-                </div>
-            </div>
-            <div class="acordeon">
-                <div class="botao">
-                    <p>BOTAO 3</p>
-                </div>
-                <div class="conteudo">
-                    <p>igo feio igo feio igo feio igo feio 
-                        igo feio igo feio igo feio igo feio
-                        igo feio igo feio igo feio igo feio 
-                    </p>
-                </div>
-            </div>
-            </li>
-        </ul>
-    </nav>
-    <script>
-
-        let clique = document.querySelector(".botao");
-        let meu_conteudo = document.querySelector(".conteudo");
-        meu_conteudo.style.height = "100px";
-
-        function max_h() {
-            meu_conteudo.classList.toggle("show");
-        }
-
-        clique.addEventListener("click", max_h);
     
-    </script>
+    <header class="titulo">
+    <button id="" class="botao_sanduiche">&#9776</button>   
+    <span>HOGWARTS</span>
+    </header>
 
+    <div class="acordeon">
+        <div class="fole">
+            <h2>História</h2>
+            <div class="conteudo">
+                <p>Há mais de 1000 anos Godric Griffyndor, Rowena Ravenclaw, Helga Hufflepuff e Salazar Slytherin, 
+                    os maiores e melhores bruxos da época, juntaram-se para formar uma escola de magia e feitiçaria. 
+                    Juntos, eles construíram o castelo de Hogwarts, com o objetivo de educar os jovens que apresentassem 
+                    algum talento mágico. Todos tinham qualidades singulares e distintas, e justamente por isso eles 
+                    criaram casas para dividir os alunos de acordo com os próprios interesses. A história de Hogwarts 
+                    está preservada de diversas formas no grande castelo, seja nos quadros, nos livros, nos fantasmas ou 
+                    no próprio dispositivo mágico usado para a divisão dos alunos em casas, o Chapéu Seletor, que era o 
+                    antigo chapéu de Godric Gryffindor (fundador da Grifinória). Porém um deles, Salazar Slytherin 
+                    (fundador da Sonserina), discordava dos outros três fundadores quanto à admissão dos alunos, pois 
+                    queria que só fossem aceitos bruxos puro-sangue (de família inteiramente bruxa) e brigou com os outros. 
+                    Construiu então a câmara secreta que só seria aberta por seu descendente para que o monstro que ela 
+                    guardava eliminasse todos os nascidos Trouxas (aqueles que não tinham sangue mágico) que estivessem na 
+                    escola. A entrada dessa câmara está no Banheiro Feminino da Murta Que Geme e aparece no filme Harry 
+                    Potter e a Câmara Secreta.
+                </p>
+            </div>
+        </div>
+        <div class="fole">
+            <h2>Disciplinas</h2>
+            <div class="conteudo">
+                <p>Hogwarts, possuí suas disciplinas como qualquer outra escola. Elas são subdivididas em Disciplinas 
+                    Obrigatórias e Disciplinas Opcionais. As Disciplinas Obrigatórias são: Poções, Feitiços, Historia da 
+                    Magia, Defesa Contra as Artes das Trevas, Herbologia, Transfiguração, Astronomia, Duelos e Vôo (dado 
+                    apenas ao 1° ano, porém alunos podem optar para verem-na se quiserem). As Disciplinas Opcionais são: 
+                    Adivinhação, Trato das Criaturas Mágicas, Estudo dos Trouxas, Runas Antigas e Aritmância.
+                </p>
+            </div>
+        </div>
+        <div class="fole">
+            <h2>Direção</h2>
+            <div class="conteudo">
+                <p>A direção de Hogwarts é um sistema hierárquico. O diretor é o cargo mais alto da instituição, possuindo 
+                    total poder sobre a escola, seguido do vice-diretor, cuja função é auxiliar o diretor. Ambos são 
+                    supervisionados pelo Conselho Diretor, formado por doze pais de alunos. Os diretores das casas possuem 
+                    poderes semelhantes aos do diretor, podendo inclusive expulsar alunos, mas o poder é limitado aos 
+                    alunos de sua casa. No quinto livro da série, Harry Potter e a Ordem da Fênix, é criado o cargo de Alta 
+                    Inquisidora de Hogwarts, que concedia ao ocupante poderes extraordinários sobre os alunos, professores 
+                    e o programa de estudos. Após o Ministério da Magia admitir a volta do Lorde das Trevas, o cargo é extinto. 
+                    Dolores Umbridge foi a única Alta Inquisidora de Hogwarts. Dentre os diretores da escola, pode-se citar: 
+                    Alvo Dumbledore (considerado o mais famoso), Minerva McGonagall, Armando Dippet, Fineus Nigellus, 
+                    Severo Snape, Dolores Umbridge, Neville Longbottom e Dilys Derwent.
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="js/js.js"></script>
 </body>
 </html>

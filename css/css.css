@@ -22,6 +22,13 @@ body{
     display: flex;
 }
 
+.linha3{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: rgb(180, 100, 255);
+}
+
 .div_ativ a{
     overflow: hidden;
     position: relative;

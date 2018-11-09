@@ -7,6 +7,14 @@
     overflow: hidden;
 }
 
+body{
+    background-image: url(../img/bg.jpg);
+    background-attachment: fixed;
+    background-size: 100%;
+    background-repeat: repeat-y;
+    opacity: 0.9;
+}
+
 .titulo{
     display: flex;
     background: rgb(0, 100, 100);
@@ -35,17 +43,15 @@
 
 body>.show{
     width: 180px;
-    height: 100vh;
-    display: block;
-    float: left;
 }
 
 .nav_lateral{
     background-color: rgb(1, 78, 78);
     width: 0px;
-    height: 0px;
+    height: 100vh;
     border-right: 1px solid black;
     transition: width 500ms;
+    float: left;
 }
 
 .nav_lateral ul li a{

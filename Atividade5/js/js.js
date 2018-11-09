@@ -18,9 +18,8 @@ function mostrarConteudo(i){
     }
 }
 
-for(let i=0; i < conteudo.length; i++)
+for(let i=0; i < fole.length; i++)
     fole[i].addEventListener("click", function(){
         mostrarConteudo(i);
     });
-
 

@@ -1,0 +1,15 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.div_login{
+    justify-content: center;
+    font-size: 18px;
+    width: 500px;
+    height: 100px;
+    display: flex;
+    background-color: rgba(0, 162, 255, 0.541);
+}

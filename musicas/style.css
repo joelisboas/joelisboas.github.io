@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Bariol', sans-serif;
+}
+
+.nav_sup{
+    background-image: linear-gradient(to right, #106A83, #444573, #CE1142, #FCAC0B, #FFEC03);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav_sup .img_logo{
+    height: 62.5px;
+    width: 100px;
+    padding: 10px;
+}
+
+.galeria{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.galeria .quadros{
+    width: 250px;
+    height: 250px;
+    background-image: linear-gradient(to right, #106A83, #444573, #CE1142, #FCAC0B, #FFEC03);
+    margin: 30px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.465);
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(to right, #106A83, #444573, #CE1142, #FCAC0B, #FFEC03);
+    width: 100%;
+}
+
+.©{
+    font-size: 10px;
+    color: white;
+    padding: 10px;
+    
+}

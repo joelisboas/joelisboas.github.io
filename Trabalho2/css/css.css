@@ -64,6 +64,7 @@ body{
 }
 
 .direita{
+    position: relative;
     width: 100%;
     background-color: rgb(218, 218, 218);
 }
@@ -128,6 +129,7 @@ body{
 }
 
 .lista_grupos ul{
+    box-shadow: 3px 0px 6px black;
     position: relative;
 }
 
@@ -179,9 +181,16 @@ body{
     font-size: 12px;
 }
 
-.bgwpp{
+.conteudo{
     background-image: url("../img/bgwpp.jpg");
     width: 100%;
-    height: 100%;
+    height: 500px;
     opacity: 0.3;
+}
+
+.caixa_texto{
+    z-index: 1;
+    height: 30px;
+    border-radius: 10px;
+    margin: 10px;
 }

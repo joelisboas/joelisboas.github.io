@@ -128,8 +128,8 @@ body{
     width: 350px;   
 }
 
-.lista_grupos ul{
-    box-shadow: 3px 0px 6px black;
+.lista_grupos ul{       
+    box-shadow: 3px 0px 6px black;     
     position: relative;
 }
 

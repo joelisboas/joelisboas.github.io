@@ -13,8 +13,30 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
-.capa{
-    padding: 0 0 2% 0;
+.capa_div{
+    z-index: 1;
+    box-shadow: 0px 2px 7px black;
+    display: flex;
+    position: relative;
+    height: 70px;
+    align-items: center;
+}
+
+.span{
+    font-weight: 600;
+    font-size: 20px;
+    color: white;
+    border-bottom: solid 2px;
+    position: absolute;
+}
+
+.span_autor{
+    padding: 2px 20px 2px 0;
+    right: 0;
+}
+
+.span_titulo{
+    padding: 2px 0px 2px 20px;    
 }
 
 .div_galeria{

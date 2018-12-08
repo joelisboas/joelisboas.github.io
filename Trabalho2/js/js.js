@@ -17,36 +17,41 @@ function criarGrupos(){
 criarGrupos();
 criarGrupos();
 criarGrupos();
+// function postGrupos(){
+//     let xhttp = new XMLHttpRequest();
 
+//     xhttp.onreadystatechange = function(){
+//       if(this.readyState == 4){
+//         console.log("POST entrou");
+//         console.log(JSON.parse(xhttp.responseText));
+//       }
+//     }
 let url = "http://rem-rest-api.herokuapp.com/api/joelisboas";
-
 function getGrupos(){
-    let xhttp1 = new XMLHttpRequest();
-    xhttp1.onreadystatechange = function(){
-    if(xhttp1.readyState==4){
-        console.log("GET entrou");
-        let body_parsed = JSON.parse(xhttp1.responseText);
-        console.log(xhttp1.responseText);
-        console.log(body_parsed);
-        // console.log(body_parsed[0].data);
+    let xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function(){
+        if(xhttp.readyState==4){
+            console.log("GET");
+            let body_parsed = JSON.parse(xhttp.responseText);
+            console.log(xhttp.responseText);
+            console.log(body_parsed);
+            // console.log(body_parsed[0].nome);
+        }
     }
+    xhttp.open("GET", url, true);
+    xhttp.send();
 }
-
-xhttp1.open("GET", url, true);
-xhttp1.send();
-}
-getGrupos();
 
 function postGrupos(){
-    let xhttp = new XMLHttpRequest();
-
-    xhttp.onreadystatechange = function(){
-      if(this.readyState == 4){
-        console.log("POST entrou");
-        JSON.parse(xhttp.responseText);
-      }
+    let xhttp1 = new XMLHttpRequest();
+    xhttp1.onreadystatechange = function(){
+        if(xhttp1.readyState==4){
+            console.log("POST");
+            console.log(xhttp1.responseText);
+        }
     }
-
+    xhttp1.open("POST", url, true);
+    xhttp1.setRequestHeader("Content-type","application/json");
     let msg = [
         //GRUPO 1
         { 
@@ -116,10 +121,8 @@ function postGrupos(){
         ]
         }
     ];
-
-    xhttp.open("POST", url, true);
-    xhttp.setRequestHeader("Content-type", "application/json");
-    xhttp.withCredentials = true;
-    xhttp.send(JSON.stringify(msg));
+    xhttp1.send(JSON.stringify(msg));
 }
+
 postGrupos();
+getGrupos();

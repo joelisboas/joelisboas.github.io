@@ -26,7 +26,7 @@ criarGrupos();
 //         console.log(JSON.parse(xhttp.responseText));
 //       }
 //     }
-let url = "http://rem-rest-api.herokuapp.com/api/joelisboas";
+let url = "http://rest.learncode.academy/api/joelisboas/lms";
 function getGrupos(){
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function(){

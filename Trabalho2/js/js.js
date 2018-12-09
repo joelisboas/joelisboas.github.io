@@ -121,22 +121,30 @@ function criarGrupos(){
                 linha_msg.appendChild(msg_usuario);
             }
             let body_parsed = JSON.parse(xhttp.responseText);
-            console.log(body_parsed);
-            
-            let grupo0 = body_parsed[0][0].grupo;
-            let grupo1 = body_parsed[0][1].grupo;
-            let grupo2 = body_parsed[0][2].grupo;
-            nome_do_grupo(grupo0);
-            nome_do_grupo(grupo1);
-            nome_do_grupo(grupo2);
+            // console.log(body_parsed);
 
-            function click_grupo(){
-                let msg1 = body_parsed[0][0].mensagens[0].usuario;
-                let msg2 = body_parsed[0][0].mensagens[0].texto;
-                mensagenss(msg1, msg2);
-            }
-            let grupo_botao = document.querySelector(".ul_grupos li");
-            grupo_botao.addEventListener("click", click_grupo);
+            for(let i = 0; i < body_parsed[0][i].grupo.length; i++){
+                let grupo0 = body_parsed[0][i].grupo;
+                nome_do_grupo(grupo0);
+            }  
+
+            let gruposALL = document.querySelector("li")
+            console.log(gruposALL);
+
+            // let grupo0 = body_parsed[0][0].grupo;
+            // let grupo1 = body_parsed[0][1].grupo;
+            // let grupo2 = body_parsed[0][2].grupo;
+            // nome_do_grupo(grupo0);
+            // nome_do_grupo(grupo1);
+            // nome_do_grupo(grupo2);
+
+            // function click_grupo(){
+            //     let msg1 = body_parsed[0][0].mensagens[0].usuario;
+            //     let msg2 = body_parsed[0][0].mensagens[0].texto;
+            //     mensagenss(msg1, msg2);
+            // }
+            // let grupo_botao = document.querySelector(".ul_grupos li");
+            // grupo_botao.addEventListener("click", click_grupo);
         }
     }
     xhttp.open("GET", url, true);

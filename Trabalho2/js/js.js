@@ -129,9 +129,13 @@ function criarGrupos(){
             nome_do_grupo(grupo1);
             nome_do_grupo(grupo2);
 
-            let msg1 = body_parsed[0][0].mensagens[0].usuario;
-            let msg2 = body_parsed[0][0].mensagens[0].texto;
-            mensagenss(msg1, msg2);
+            function click_grupo(){
+                let msg1 = body_parsed[0][0].mensagens[0].usuario;
+                let msg2 = body_parsed[0][0].mensagens[0].texto;
+                mensagenss(msg1, msg2);
+            }
+            let grupo_botao = document.querySelector(".ul_grupos li");
+            grupo_botao.addEventListener("click", click_grupo);
         }
     }
     xhttp.open("GET", url, true);

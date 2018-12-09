@@ -4,8 +4,8 @@ function postGrupos(){
     let xhttp1 = new XMLHttpRequest();
     xhttp1.onreadystatechange = function(){
         if(xhttp1.readyState==4){
-            console.log("POST");
-            console.log(xhttp1.responseText);
+            // console.log("POST");
+            // console.log(xhttp1.responseText);
         }
     }
     xhttp1.open("POST", url, true);
@@ -16,7 +16,7 @@ function postGrupos(){
     let msg = [
         //GRUPO 1
         { 
-        grupo: "Grupo 1",
+        grupo: "Grupo da Família",
         mensagens: [{
             usuario: "joao03",
             texto: "Tudo bem?"
@@ -33,7 +33,7 @@ function postGrupos(){
         },
         //GRUPO 2
         { 
-        grupo: "Grupo 2",
+        grupo: "Galera de DD",
         mensagens: [{
             usuario: "maria2000",
             texto: "Na paz?"
@@ -50,7 +50,7 @@ function postGrupos(){
         },
         //Grupo 3
         { 
-        grupo: "Grupo 3",
+        grupo: "Fundão",
         mensagens: [{
             usuario: "joao03",
             texto: "Tudo bem?"
@@ -73,10 +73,10 @@ function getGrupos(){
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function(){
         if(xhttp.readyState==4){
-            console.log("GET");
+            // console.log("GET");
             let body_parsed = JSON.parse(xhttp.responseText);
-            console.log(xhttp.responseText);
-            console.log(body_parsed);
+            // console.log(xhttp.responseText);
+            // console.log(body_parsed);
             // console.log(body_parsed[0].nome);
         }
     }
@@ -88,10 +88,11 @@ function criarGrupos(){
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function(){
         if(xhttp.readyState==4){
-            console.log("CRIANDO GRUPO");      
+            // console.log("CRIANDO GRUPO");      
             function nome_do_grupo(nome){
                 let grupos = document.querySelector(".ul_grupos");
                 let grupo_linha = document.createElement("li");
+                grupo_linha.classList.add("li_grupo");
                 grupos.appendChild(grupo_linha);
             
                 let foto_grupo = document.createElement("div");
@@ -126,14 +127,23 @@ function criarGrupos(){
             for(let i = 0; i < body_parsed[0].length; i++){
                 let grupo0 = body_parsed[0][i].grupo;
                 nome_do_grupo(grupo0);
+                console.log(body_parsed[0][i].grupo);
             }  
 
-            // let gruposALL = document.querySelector("li")
-            // console.log(gruposALL);
+            let gruposALL = document.querySelectorAll(".li_grupo");
+            console.log("TODOS GRUPOS", gruposALL);
 
-            // for(let i = 0; i < gruposALL.length; i++){
-            //     gruposALL[i].addEventListener("click", function())
-            // }
+            for(let g = 0; g < gruposALL.length; g++){
+                gruposALL[g].addEventListener("click", function(){
+
+                    let msgg = document.querySelector(".lista_msg");
+                    msgg.innerHTML = "";
+
+                    for(let j = 0; j < body_parsed[0][g].mensagens.length; j++){
+                        mensagenss(body_parsed[0][g].mensagens[j].usuario, body_parsed[0][g].mensagens[j].texto);
+                    }
+                });
+            }
 
             // let grupo0 = body_parsed[0][0].grupo;
             // let grupo1 = body_parsed[0][1].grupo;
@@ -141,14 +151,6 @@ function criarGrupos(){
             // nome_do_grupo(grupo0);
             // nome_do_grupo(grupo1);
             // nome_do_grupo(grupo2);
-
-            function click_grupo(){
-                let msg1 = body_parsed[0][0].mensagens[0].usuario;
-                let msg2 = body_parsed[0][0].mensagens[0].texto;
-                mensagenss(msg1, msg2);
-            }
-            let grupo_botao = document.querySelector(".ul_grupos li");
-            grupo_botao.addEventListener("click", click_grupo);
         }
     }
     xhttp.open("GET", url, true);

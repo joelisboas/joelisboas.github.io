@@ -88,36 +88,46 @@ function criarGrupos(){
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function(){
         if(xhttp.readyState==4){
-            // console.log("CRIANDO GRUPO");      
+            // console.log("CRIANDO GRUPO");
             function nome_do_grupo(nome){
                 let grupos = document.querySelector(".ul_grupos");
-                let grupo_linha = document.createElement("li");
-                grupo_linha.classList.add("li_grupo");
-                grupos.appendChild(grupo_linha);
-            
+                let grupo_linha = document.createElement("li");                
                 let foto_grupo = document.createElement("div");
-                foto_grupo.classList.add("foto_grupo");
-                grupo_linha.appendChild(foto_grupo);
-
                 let nome_grupo = document.createElement("span");
+
                 let texto_nome = document.createTextNode(nome);
+
+                grupo_linha.classList.add("li_grupo");
+                foto_grupo.classList.add("foto_grupo");
+
+                grupos.appendChild(grupo_linha);
+                grupo_linha.appendChild(foto_grupo);
                 nome_grupo.appendChild(texto_nome);
                 grupo_linha.appendChild(nome_grupo);
             }
+
+            function titulo_grupo(nome){
+                let titulo_grupo = document.querySelector(".titulo_grupo");
+                titulo_grupo.innerHTML = nome;
+            }
+
             function mensagenss(nome_user, msg_user){
                 let lista_msg = document.querySelector(".lista_msg");
-                let linha_msg = document.createElement("li");
-                lista_msg.appendChild(linha_msg);
-            
+
+                let linha_msg = document.createElement("li");          
                 let nome_usuario = document.createElement("span");
-                nome_usuario.classList.add("nome_usuario");
+                let msg_usuario = document.createElement("span");
+
                 let texto_usuario = document.createTextNode(nome_user);
+                let texto_msg = document.createTextNode(msg_user);  
+
+                nome_usuario.classList.add("nome_usuario");
+                msg_usuario.classList.add("mensagem_usuario");
+
+
+                lista_msg.appendChild(linha_msg);
                 nome_usuario.appendChild(texto_usuario);
                 linha_msg.appendChild(nome_usuario);
-            
-                let msg_usuario = document.createElement("span");
-                msg_usuario.classList.add("mensagem_usuario");
-                let texto_msg = document.createTextNode(msg_user);
                 msg_usuario.appendChild(texto_msg);
                 linha_msg.appendChild(msg_usuario);
             }
@@ -135,6 +145,8 @@ function criarGrupos(){
 
             for(let g = 0; g < gruposALL.length; g++){
                 gruposALL[g].addEventListener("click", function(){
+                    console.log(gruposALL[g].textContent);
+                    titulo_grupo(gruposALL[g].textContent);
 
                     let msgg = document.querySelector(".lista_msg");
                     msgg.innerHTML = "";

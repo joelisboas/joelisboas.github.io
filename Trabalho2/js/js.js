@@ -52,16 +52,16 @@ function postGrupos(){
         { 
         grupo: "Fundão",
         mensagens: [{
-            usuario: "joao03",
-            texto: "Tudo bem?"
+            usuario: "Pedrosa",
+            texto: "Vocês são demais"
             },
             {
-            usuario: "victor23",
-            texto: "Tudo Tranqs"
+            usuario: "João",
+            texto: "bla bla"
             },
             {
-            usuario: "joao03",
-            texto: "Que bom"
+            usuario: "Antonio",
+            texto: "KKKKK"
             }
         ]
         }

@@ -16,7 +16,7 @@ function postGrupos(){
     let msg = [
         //GRUPO 1
         { 
-        grupo: "Grupo da família!",
+        grupo: "Grupo 1",
         mensagens: [{
             usuario: "joao03",
             texto: "Tudo bem?"
@@ -33,7 +33,7 @@ function postGrupos(){
         },
         //GRUPO 2
         { 
-        grupo: "Churrascão no domingão",
+        grupo: "Grupo 2",
         mensagens: [{
             usuario: "maria2000",
             texto: "Na paz?"
@@ -46,6 +46,23 @@ function postGrupos(){
             usuario: "maria2000",
             texto: "Que bom"
             },
+        ]
+        },
+        //Grupo 3
+        { 
+        grupo: "Grupo 3",
+        mensagens: [{
+            usuario: "joao03",
+            texto: "Tudo bem?"
+            },
+            {
+            usuario: "victor23",
+            texto: "Tudo Tranqs"
+            },
+            {
+            usuario: "joao03",
+            texto: "Que bom"
+            }
         ]
         }
     ];
@@ -71,7 +88,7 @@ function criarGrupos(){
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function(){
         if(xhttp.readyState==4){
-            console.log("CRIANDO GRUPO");            
+            console.log("CRIANDO GRUPO");      
             function nome_do_grupo(nome){
                 let grupos = document.querySelector(".ul_grupos");
                 let grupo_linha = document.createElement("li");
@@ -86,11 +103,35 @@ function criarGrupos(){
                 nome_grupo.appendChild(texto_nome);
                 grupo_linha.appendChild(nome_grupo);
             }
+            function mensagenss(nome_user, msg_user){
+                let lista_msg = document.querySelector(".lista_msg");
+                let linha_msg = document.createElement("li");
+                lista_msg.appendChild(linha_msg);
+            
+                let nome_usuario = document.createElement("span");
+                nome_usuario.classList.add("nome_usuario");
+                let texto_usuario = document.createTextNode(nome_user);
+                nome_usuario.appendChild(texto_usuario);
+                linha_msg.appendChild(nome_usuario);
+            
+                let msg_usuario = document.createElement("span");
+                msg_usuario.classList.add("mensagem_usuario");
+                let texto_msg = document.createTextNode(msg_user);
+                msg_usuario.appendChild(texto_msg);
+                linha_msg.appendChild(msg_usuario);
+            }
             let body_parsed = JSON.parse(xhttp.responseText);
+            console.log(body_parsed);
             let grupo0 = body_parsed[0][0].grupo;
             let grupo1 = body_parsed[0][1].grupo;
+            let grupo2 = body_parsed[0][2].grupo;
             nome_do_grupo(grupo0);
             nome_do_grupo(grupo1);
+            nome_do_grupo(grupo2);
+
+            let msg1 = body_parsed[0][0].mensagens[0].usuario;
+            let msg2 = body_parsed[0][0].mensagens[0].texto;
+            mensagenss(msg1, msg2);
         }
     }
     xhttp.open("GET", url, true);

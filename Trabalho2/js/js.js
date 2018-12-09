@@ -123,7 +123,7 @@ function criarGrupos(){
             let body_parsed = JSON.parse(xhttp.responseText);
             // console.log(body_parsed);
 
-            for(let i = 0; i < body_parsed[0][i].grupo.length; i++){
+            for(let i = 0; i < body_parsed[0].length; i++){
                 let grupo0 = body_parsed[0][i].grupo;
                 nome_do_grupo(grupo0);
             }  

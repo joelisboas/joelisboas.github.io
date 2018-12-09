@@ -122,6 +122,7 @@ function criarGrupos(){
             }
             let body_parsed = JSON.parse(xhttp.responseText);
             console.log(body_parsed);
+            
             let grupo0 = body_parsed[0][0].grupo;
             let grupo1 = body_parsed[0][1].grupo;
             let grupo2 = body_parsed[0][2].grupo;

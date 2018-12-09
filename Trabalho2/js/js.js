@@ -9,6 +9,7 @@ function postGrupos(){
         }
     }
     xhttp1.open("POST", url, true);
+    // xhttp1.withCredentials = true;
     xhttp1.onload = function(){
         criarGrupos();
       };
@@ -81,6 +82,7 @@ function getGrupos(){
         }
     }
     xhttp.open("GET", url, true);
+    // xhttp.withCredentials = true;
     xhttp.send();
 }
 
@@ -158,6 +160,7 @@ function criarGrupos(){
         }
     }
     xhttp.open("GET", url, true);
+    // xhttp.withCredentials = true;
     xhttp.send();
 }
 

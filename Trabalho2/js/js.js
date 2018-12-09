@@ -145,7 +145,6 @@ function criarGrupos(){
 
             for(let g = 0; g < gruposALL.length; g++){
                 gruposALL[g].addEventListener("click", function(){
-                    console.log(gruposALL[g].textContent);
                     titulo_grupo(gruposALL[g].textContent);
 
                     let msgg = document.querySelector(".lista_msg");
@@ -156,13 +155,6 @@ function criarGrupos(){
                     }
                 });
             }
-
-            // let grupo0 = body_parsed[0][0].grupo;
-            // let grupo1 = body_parsed[0][1].grupo;
-            // let grupo2 = body_parsed[0][2].grupo;
-            // nome_do_grupo(grupo0);
-            // nome_do_grupo(grupo1);
-            // nome_do_grupo(grupo2);
         }
     }
     xhttp.open("GET", url, true);

@@ -82,7 +82,7 @@ function getGrupos(){
         }
     }
     xhttp.open("GET", url, true);
-    // xhttp.withCredentials = true;
+    xhttp.withCredentials = true;
     xhttp.send();
 }
 
